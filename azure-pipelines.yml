@@ -17,9 +17,6 @@ steps:
 - task: Docker@2
   displayName: Push image
   inputs:
-    containerRegistry: 'azure'
+    containerRegistry: $(dockerHub)
     repository: $(imageName)
     command: push
-    tags: |
-      test1
-      test2
