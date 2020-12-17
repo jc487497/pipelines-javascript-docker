@@ -17,7 +17,8 @@ steps:
 - task: Docker@2
   displayName: Push image
   inputs:
-    containerRegistry: dockerHub
+    containerRegistry: |
+      $(dockerHub)
     repository: huylong810/azure
     command: push
     tags: |
