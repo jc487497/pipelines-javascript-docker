@@ -9,14 +9,8 @@ variables:
 
 steps:
 - task: Docker@2
-  displayName: Build an image
   inputs:
-    repository: $(imageName)
-    command: build
-    Dockerfile: app/Dockerfile
-- task: Docker@2
-  displayName: Push image
-  inputs:
-    containerRegistry: $(dockerHub)
-    repository: $(imageName)
-    command: push
+    containerRegistry: 'docker-azure'
+    repository: 'huylong810'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
