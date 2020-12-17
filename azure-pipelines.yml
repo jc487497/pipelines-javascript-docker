@@ -17,6 +17,6 @@ steps:
   displayName: Build and Push Image
   inputs:
     containerRegistry: 'Azure-docker'
-    repository: $(imageName)
+    repository: azure
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
