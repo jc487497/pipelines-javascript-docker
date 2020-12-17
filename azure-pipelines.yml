@@ -20,6 +20,3 @@ steps:
     containerRegistry: docker-azure
     repository: huylong810/azure
     command: push
-    tags: |
-      test1
-      test2
